@@ -128,3 +128,92 @@ body {
     color: #fff;
     transition: 0.2s;
 }
+.register {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.register:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #615ddb;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.register span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.register svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.register:hover:before {
+  width: 100%;
+  background: #615ddb;
+}
+
+.register:hover svg {
+  transform: translateX(0);
+}
+
+.register:active {
+  transform: scale(0.80);
+}
+
+
+
+.register input {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.register input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.register input:focus {
+  border: 2px solid var(--input-focus);
+}
